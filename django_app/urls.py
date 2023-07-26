@@ -22,7 +22,7 @@ import hello.views as hello
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    # ①helloアドレスにアクセスがきたらhello.indexを実行する
+    # ①helloアドレスにアクセスがきたらhelloフォルダのviews.pyのindex関数を実行する
     path('hello/', hello.index),
 
     #helloプロジェクトのurls.pyを見る
