@@ -1,0 +1,9 @@
+*.log
+*.pyc
+__pycache__/
+db-volumes/
+db.sqlite3
+hello/__pycache__/
+hello/migrations/__pycache__/
+.DS_Store
+Thumbs.db
