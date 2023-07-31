@@ -1,2 +1,4 @@
 # PythonDjango_study
 PythonのフレームワークDjangoのお勉強用
+# PythonDjango_study
+PythonDjangoの勉強
