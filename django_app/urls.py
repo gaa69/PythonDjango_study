@@ -14,18 +14,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-# includeを書き足す
+# ②includeを書き足す
 from django.urls import path,include
 # ①
-import hello.views as hello
+# import hello.views as hello
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
     # ①helloアドレスにアクセスがきたらブラウザのhello.indexを実行
     # helloフォルダのviews.pyのindex関数を実行する
-    path('hello/', hello.index),
+    # path('hello/', hello.index),
 
-    #helloプロジェクトのurls.pyを見る
-    # path('hello/', include('hello.urls')),
+    #②helloプロジェクトのurls.pyを見る
+    path('hello/', include('hello.urls')),
 ]
