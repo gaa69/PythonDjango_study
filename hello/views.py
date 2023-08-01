@@ -2,9 +2,14 @@ from django.shortcuts import render
 # レスポンスクラス
 from django.http import HttpResponse
 
-# ①
 def index(request):
-    return HttpResponse("Hello Djngo!")
 
-# def index(request):
-#     return render(request, 'hello/index.html')
+    # ①パラメータ表示方法
+    # GET['msg']の中に値があるかチェック
+    if 'msg' in request.GET:
+        msg = request.GET['msg']
+        return HttpResponse('パラメータを表示 「'+msg+'」')
+    else:
+        result = 'パラメータはないよ'
+
+    return HttpResponse(result)
